@@ -1,3 +1,17 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : express-session
+# Source Repo         : https://github.com/expressjs/session
+# Travis Job Link     : https://travis-ci.com/github/santosh653/session
+# Created travis.yml  : No
+# Maintainer          : Santosh Kulkarni <santoshkulkarni70@gmail.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
+arch:
+  - amd64
+  - ppc64le
 language: node_js
 node_js:
   - "0.8"
@@ -17,6 +31,21 @@ node_js:
   - "12.18"
   - "13.14"
   - "14.7"
+jobs:
+ exclude:
+  - node_js: "0.8"
+    arch: ppc64le
+  - node_js: "0.10"
+    arch: ppc64le
+  - node_js: "0.12"
+    arch: ppc64le
+  - node_js: "1.8"
+    arch: ppc64le
+  - node_js: "2.5"
+    arch: ppc64le
+
+
+
 cache:
   directories:
     - node_modules
